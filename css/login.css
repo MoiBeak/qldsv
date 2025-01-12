@@ -1,0 +1,84 @@
+/* Đặt nền cho toàn bộ trang */
+body {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("humg.png");
+  background-size: cover; /* Thay thế background-size */
+  background-position: center;
+}
+
+/* Chỉnh kiểu cho div chứa form */
+.main {
+  background-color: rgba(235, 234, 234, 0.7);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 400px;
+}
+
+/* Tiêu đề */
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Form nhập liệu */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* Nút đăng nhập */
+input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển động */
+}
+
+/* Hiệu ứng hover cho nút */
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Thông báo lỗi */
+p {
+  color: red;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Cải thiện giao diện cho thông báo lỗi */
+.error-message {
+  text-align: center;
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.help {
+  color: red;
+  display: flex;
+  justify-content: flex-end;
+  margin: 14px;
+  padding: 0 10px;
+  font-size: 12px;
+}

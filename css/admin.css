@@ -1,0 +1,618 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  .poppins-thin {
+    font-family: Arial, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  .poppins-extralight {
+    font-family: Arial, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  .poppins-light {
+    font-family: Arial, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .poppins-regular {
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .poppins-medium {
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .poppins-semibold {
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .poppins-thin-italic {
+    font-family: Arial, sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+
+  .poppins-extralight-italic {
+    font-family: Arial, sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+
+  .poppins-light-italic {
+    font-family: Arial, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .poppins-regular-italic {
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .poppins-medium-italic {
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  .poppins-semibold-italic {
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* colors */
+  --body-color: #fff;
+  --sidebar-color: #e4e9f7;
+  --primary-color: #695cfe;
+  --primary-color-light: #f6f5ff;
+  --toggle-color: #ddd;
+  --text-color: #707070;
+
+  /* transition */
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
+}
+
+body {
+  height: 100vh;
+  background: var(--body-color);
+}
+
+/* =====sidebar====== */
+.sidebar {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  padding: 10px 14px;
+  background: var(--sidebar-color);
+}
+
+/* ====resuable css==== */
+.sidebar .text {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.sidebar .image {
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+}
+.sidebar li {
+  height: 50px;
+  margin-top: 10px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.sidebar li .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  font-size: 20px;
+}
+.sidebar li .icon,
+.sidebar header {
+  position: relative;
+  transition: var(--tran-02);
+}
+.sidebar .image-text img {
+  width: 40px;
+  border-radius: 6px;
+}
+.sidebar header .image-text {
+  display: flex;
+  align-items: center;
+}
+header .image-text .header-text {
+  display: flex;
+  flex-direction: column;
+}
+.header-text .name {
+  font-weight: 600;
+}
+.header-text .profession {
+  margin-top: -2px;
+}
+.sidebar header .toggle {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  height: 25px;
+  width: 25px;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--sidebar-color);
+  font-size: 22px;
+}
+.sidebar .search-box {
+  background: var(--primary-color-light);
+}
+.search-box input {
+  height: 100%;
+  width: 100%;
+  background: var(--primary-color-light);
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.sidebar li a {
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  transition: var(--tran-04);
+}
+.sidebar li a:hover {
+  background: var(--primary-color);
+}
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text {
+  color: var(--sidebar-color);
+}
+.sidebar .menu-bar {
+  height: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.home {
+  position: relative;
+  height: 100vh;
+  left: 250px;
+  width: calc(100% - 250px);
+}
+.home .text {
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 8px 40px;
+}
+.ttlh {
+  background: #e3f7f8;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+.ttlh h {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+.ttlp p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #555;
+}
+.ttlp p span {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Định dạng bảng */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Tìm kiếm */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Hover khi di chuột qua dòng */
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Định dạng lớp ascending cho cột sắp xếp */
+th.ascending {
+  background-color: #d3d3d3;
+}
+
+/* Thêm hiệu ứng sắp xếp */
+th {
+  cursor: pointer;
+}
+.tieude {
+  text-align: center;
+}
+#dl-pdf {
+  position: fixed; /* Đặt vị trí cố định */
+  bottom: 20px; /* Cách cạnh dưới 20px */
+  right: 20px; /* Cách cạnh phải 20px */
+  background-color: red;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px #888;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+#dl-pdf:hover {
+  background-color: #3e8e41;
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+.left-panel {
+  position: fixed;
+  left: 10px;
+  top: 100px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 200px;
+}
+
+.left-panel h3,
+.left-panel p {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.left-panel button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.left-panel button:hover {
+  background-color: #0056b3;
+}
+CSS cho Form sửa điểm #form-sua-diem form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px; /* Giới hạn chiều rộng */
+  margin: 0 auto; /* Canh giữa */
+  padding: 20px;
+  background-color: #f9f9f9; /* Màu nền nhẹ */
+  border-radius: 10px; /* Bo góc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 48%; /* Chiều rộng tối đa cho mỗi ô */
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333; /* Màu sắc nhãn */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4caf50; /* Màu sắc khi focus */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.form-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-buttons button[type="submit"] {
+  background-color: #4caf50; /* Màu nền nút Lưu */
+  color: white;
+}
+
+.form-buttons button[type="submit"]:hover {
+  background-color: #45a049; /* Màu nền khi hover */
+}
+
+.form-buttons button[type="button"] {
+  background-color: #f44336; /* Màu nền nút Hủy */
+  color: white;
+}
+
+.form-buttons button[type="button"]:hover {
+  background-color: #e53935; /* Màu nền khi hover */
+}
+
+#cancel-btn {
+  background-color: #f44336;
+}
+
+#cancel-btn:hover {
+  background-color: #e53935;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#add-btn {
+  margin-bottom: 20px;
+  background-color: #008cba;
+  color: white;
+}
+/* CSS cho các nút chức năng (Sửa, Xóa) */
+button,
+.form-buttons button {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #4caf50; /* Màu xanh lá cho nút Sửa */
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #45a049; /* Màu xanh lá đậm khi hover */
+  transform: scale(1.05); /* Hiệu ứng phóng to khi hover */
+}
+
+.delete-btn {
+  background-color: #f44336; /* Màu đỏ cho nút Xóa */
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f; /* Màu đỏ đậm khi hover */
+  transform: scale(1.05); /* Hiệu ứng phóng to khi hover */
+}
+
+button:focus {
+  outline: none; /* Loại bỏ viền focus mặc định */
+}
+
+button:active {
+  transform: scale(0.98); /* Hiệu ứng co lại khi nhấn */
+}
+
+/* CSS cho bảng */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+/* CSS cho phần nhập điểm từ CSV */
+form {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  margin: 20px auto;
+}
+
+form h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+form input[type="file"] {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 1em;
+}
+
+form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+form button:active {
+  background-color: #3e8e41;
+}
+
+/* Hiển thị thông báo */
+.alert {
+  background-color: #ff9800;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.tieude {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#myPieChart {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 500px; /* Đặt giới hạn tối đa */
+  max-height: 500px;
+}
+.chart-container {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px; /* Giới hạn chiều rộng container */
+}
+
+.chart-container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+canvas {
+  height: 100hv;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%; /* Đảm bảo biểu đồ không vượt quá container */
+  max-height: 400px; /* Giới hạn chiều cao biểu đồ */
+}
+
+.chart-legend {
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+}
